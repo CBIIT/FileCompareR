@@ -1,0 +1,13 @@
+participant_id_match,participant_id_partial,participant_id_nomatch,info1,info2,info3
+pti_132,pti_132,pti_140,a,m,y
+pti_133,pti_133,pti_141,b,n,z
+pti_134,pti_134,pti_142,c,o,z2
+pti_135,pti_425,pti_143,d,p,z3
+pti_136,pti_136,pti_144,e,q,z4
+pti_137,pti_137,pti_145,f,r,z5
+pti_132,pti_138,pti_146,g,s,z6
+pti_133,pti_133,pti_147,h,t,z7
+pti_134,pti_134,pti_148,i,u,z8
+pti_135,pti_138,pti_149,j,v,z9
+pti_136,pti_132,pti_150,k,w,z10
+pti_137,pti_140,pti_151,l,x,z11
