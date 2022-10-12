@@ -26,7 +26,7 @@ Options:
 An example data set is also given, here is one possible entry:
 
 ```
-Rscript --vanilla FileCompareR.R -c Test_files/clinical_test.xlsx -m Test_files/metadata_test.csv 
+Rscript --vanilla FileCompareR.R -c test_files/clinical_test.xlsx -m test_files/metadata_test.csv 
 
 Based on the following columns, which column should the clincal file use:
 
@@ -63,5 +63,5 @@ info3
 
 participant_id_partial
 
-Please see the output found here: Test_files/clinical_test_Compare_2022_10_12.txt
+Please see the output found here: test_files/clinical_test_Compare_2022_10_12.txt
 ```
