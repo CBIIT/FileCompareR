@@ -10,7 +10,7 @@ Rscript --vanilla FileCompareR.R --help
 ```
 Usage: FileCompareR.R [options]
 
-FileCompareR v1.0.0
+FileCompareR v2.0.0
 
 Options:
 	-c CHARACTER, --clinical=CHARACTER
