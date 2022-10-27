@@ -92,11 +92,11 @@ determine_out <- function(file_path){
   
   #Output file name based on input file name and date/time stamped.
   output_file=paste(file_name,
-                    "_Compare_",
+                    "_Compare",
                     stri_replace_all_fixed(
                       str = Sys.Date(),
                       pattern = "-",
-                      replacement = "_"),
+                      replacement = ""),
                     sep="")
 }
 
@@ -104,9 +104,8 @@ determine_out <- function(file_path){
 #Further logic has been setup to accept the original XLSX as well as a TSV or CSV format.
 read_in <- function(file_path){
   #Rework the file path to obtain a file name, this will be used for the output file.
-  file_name=stri_reverse(stri_split_fixed(str = (stri_split_fixed(str = stri_reverse(file_path), pattern="/",n = 2)[[1]][1]),pattern = ".", n=2)[[1]][2])
-  
-  ext=tolower(stri_reverse(stri_split_fixed(str = stri_reverse(file_path),pattern = ".",n=2)[[1]][1]))
+  file_name=stri_reverse(stri_split_fixed(stri_reverse(basename(file_path)),pattern = ".", n=2)[[1]][2])
+  ext=tolower(stri_reverse(stri_split_fixed(stri_reverse(basename(file_path)),pattern = ".", n=2)[[1]][1]))
 
   if (ext == "tsv"){
     df=suppressMessages(read_tsv(file = file_path, guess_max = 1000000, col_types = cols(.default = col_character(),),trim_ws = FALSE))
@@ -145,7 +144,6 @@ check_input <- function(dataframe,whichdf){
   }
   return(col_name)
 }
-
 
 
 #pull information for clinical
@@ -197,4 +195,4 @@ if (length(clinical_uniques)==0 & length(metadata_uniques)==0){
 
 sink()
 
-cat(paste("\nPlease see the output found here: ",path,output_file,".txt\n",sep = ""))
+cat(paste("\n\nProcess Complete.\n\nThe output files can be found here: ",path,"\n\n",sep = "")) 
