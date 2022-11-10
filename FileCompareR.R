@@ -1,6 +1,6 @@
 #!/usr/bin/env Rscript
 
-#FileCompareR v1.0.0
+#FileCompareR v2.0.0
 
 
 ##################
@@ -22,7 +22,13 @@
 ##################
 
 #List of needed packages
-list_of_packages=c("dplyr","readr","stringi","janitor","readxl","optparse","tools")
+list_of_packages=c("dplyr",
+                   "readr",
+                   "stringi",
+                   "janitor",
+                   "readxl",
+                   "optparse",
+                   "tools")
 
 #Based on the packages that are present, install ones that are required.
 new.packages <- list_of_packages[!(list_of_packages %in% installed.packages()[,"Package"])]
