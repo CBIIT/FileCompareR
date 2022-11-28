@@ -10,14 +10,23 @@ Rscript --vanilla FileCompareR.R --help
 ```
 Usage: FileCompareR.R [options]
 
-FileCompareR v2.0.0
+FileCompareR v2.0.1
 
 Options:
 	-c CHARACTER, --clinical=CHARACTER
 		clinical dataset file (.xlsx, .tsv, .csv)
 
+	-l CHARACTER, --clinical_sheet=CHARACTER
+		clinical dataset file sheet if the file is an .xlsx
+
 	-m CHARACTER, --metadata=CHARACTER
 		metadata dataset file (.xlsx, .tsv, .csv)
+
+	-e CHARACTER, --metadata_sheet=CHARACTER
+		clinical dataset file sheet if the file is an .xlsx
+
+	-t CHARACTER, --translate=CHARACTER
+		Flag 'Yes' if you would like to use a second column in the metadata file to translate a column in the clinical data file.
 
 	-h, --help
 		Show this help message and exit
