@@ -35,7 +35,7 @@ Options:
 An example data set is also given, here is one possible entry:
 
 ```
-Rscript --vanilla FileCompareR.R -c test_files/clinical_test.xlsx -m test_files/metadata_test.csv 
+Rscript --vanilla FileCompareR.R -c test_files/clinical_test.xlsx -l Sheet1 -m test_files/metadata_test.csv 
 
 Based on the following columns, which column should the clincal file use:
 
@@ -73,4 +73,42 @@ info3
 participant_id_partial
 
 Please see the output found here: test_files/clinical_test_Compare_2022_10_12.txt
+```
+
+An example using the translation fuction:
+
+```
+Rscript --vanilla FileCompareR.R -c test_files/clinical_test.xlsx -l Sheet1 -m test_files/translation.xlsx -e Sheet1 -t yes
+
+Based on the following columns, which column should the clincal file use:
+
+participant_id
+test1
+test2
+test3
+test4
+test5
+
+test1
+
+Based on the following columns, which column should the metadata file use:
+
+test1
+values
+
+test1
+
+The flag for translation has been selected. Please choose a column to translate to.
+Based on the following columns, which column should the metadata file use:
+
+test1
+values
+
+values
+
+
+Process Complete.
+
+The output files can be found here: FileCompareR/test_files/
+
 ```
